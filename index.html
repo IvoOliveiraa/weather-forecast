@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>previsão do tempo</title>
+    <!--link bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.12.1/font/bootstrap-icons.min.css">
+     <!--link css-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="toggle-container">
+            <input type="checkbox" name="toggle" id="toggle">
+            <label for="toggle">
+                <div class="circle"></div>
+            </label>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>Confira o clima de uma cidade:</h1>
+
+            <div class="form-container width">
+                <input type="text" name="city" id="city-input" placeholder="Digite o nome da cidade">
+                <button id="search"><i class="bi bi-search"></i></button>
+            </div>
+
+            <div class="weather-data">
+                <div class="city width">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    <p>Nova iguaçu</p>
+                </div>
+
+                <div class="temperature width">
+                    <p><span>38</span>&deg;C</p>
+                </div>
+
+                <div class="weather width">
+                    <p>Nublado</p>
+                    <img src="http://openweathermap.org/img/wn/01d.png" alt="">
+                </div>
+
+                <div class="container-wind">
+                    <div class="humidity width">
+                        <i class="bi bi-droplet-fill"></i>
+                        <p><span>48</span>%</p>
+                    </div>
+
+                    <div class="wind width">
+                        <i class="bi bi-wind"></i>
+                        <p><span>3km/h</span></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!--link javaScript-->
+    <script src="script.js"></script>
+</body>
+</html>

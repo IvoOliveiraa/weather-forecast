@@ -1,0 +1,154 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    color: #fafafa;
+}
+
+p{
+    font-size: 25px;
+}
+
+i{
+    font-size: 20px;
+}
+
+
+body{
+    background-image: url('assets/img/cloud.jpg');
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    transition: background-image 0.5s;
+}
+
+header{
+    display: flex;
+    justify-content: end;
+}
+
+header .toggle-container{
+    display: flex;
+}
+
+header .toggle-container #toggle{
+    display: none;
+}
+
+header .toggle-container #toggle:checked + label .circle{
+    transform: translateX(58px);
+}
+
+header .toggle-container .circle{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #fafafa;
+    position: relative;
+    transform: translateX(0px);
+    transition: transform 0.5s;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.301);
+}
+
+header .toggle-container label{
+    background-color:#4dc0ec;
+    width: 90px;
+    padding: 3px;
+    margin: 20px 200px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}   
+
+main .container{
+    backdrop-filter: blur(10px);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.301);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+
+main .container h1{
+    font-size: 30px;
+    margin: 10px 0;
+    text-align: center;
+    padding: 20px;
+}
+
+main .form-container{
+    border-bottom: 1px solid #fafafa;
+    text-align: center;
+    padding: 20px 5px;
+}
+
+main .form-container input{
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background-color: transparent;
+    border: 1px solid #fafafa;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+
+main .form-container input::placeholder{
+    color: #fafafa;
+}
+
+main .form-container button{
+    border-radius: 4px;
+    border: none;
+    background-color: transparent;
+    border: 1px solid #fafafa;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 7px;
+}
+
+main .weather-data{
+    padding: 10px;
+}
+
+main .weather-data .width{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    padding: 5px;
+}
+
+main .weather-data .container-wind{
+    display: flex;
+    justify-content: center;
+}
+
+main .weather-data i{
+    margin: 0 10px;
+}
+
+main .weather-data .container-wind .humidity{
+    padding: 0 10px;
+    border-right: 1px solid #fafafa;
+}
+
+/*Dark mode*/
+.dark,
+.dark body{
+    background-image: url('assets/img/cloud2.jpg');
+}
+
+.dark header .toggle-container label{
+    background-color: #162f7d;
+}
