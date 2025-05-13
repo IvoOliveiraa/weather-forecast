@@ -25,42 +25,6 @@ body{
     transition: background-image 0.5s;
 }
 
-header{
-    display: flex;
-    justify-content: end;
-}
-
-header .toggle-container{
-    display: flex;
-}
-
-header .toggle-container #toggle{
-    display: none;
-}
-
-header .toggle-container #toggle:checked + label .circle{
-    transform: translateX(58px);
-}
-
-header .toggle-container .circle{
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background-color: #fafafa;
-    position: relative;
-    transform: translateX(0px);
-    transition: transform 0.5s;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.301);
-}
-
-header .toggle-container label{
-    background-color:#4dc0ec;
-    width: 90px;
-    padding: 3px;
-    margin: 20px 200px;
-    border-radius: 20px;
-    cursor: pointer;
-}
 
 main{
     display: flex;
@@ -78,6 +42,38 @@ main .container{
     margin: 10px;
 }
 
+.toggle-container{
+    display: flex;
+    justify-content: end;
+}
+
+.toggle-container #toggle{
+    display: none;
+}
+
+.toggle-container #toggle:checked + label .circle{
+    transform: translateX(58px);
+}
+
+.toggle-container .circle{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #fafafa;
+    position: relative;
+    transform: translateX(0px);
+    transition: transform 0.5s;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.301);
+}
+
+.toggle-container label{
+    background-color:#4dc0ec;
+    width: 90px;
+    padding: 3px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
 main .container h1{
     font-size: 30px;
     margin: 10px 0;
@@ -89,6 +85,9 @@ main .form-container{
     border-bottom: 1px solid #fafafa;
     text-align: center;
     padding: 20px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 main .form-container input{
@@ -101,6 +100,7 @@ main .form-container input{
     font-weight: bold;
     text-align: center;
     padding: 10px;
+    margin: 0 5px;
 }
 
 main .form-container input::placeholder{
@@ -119,6 +119,10 @@ main .form-container button{
 
 main .weather-data{
     padding: 10px;
+}
+
+main .hide{
+    display: none;
 }
 
 main .weather-data .width{
@@ -149,6 +153,6 @@ main .weather-data .container-wind .humidity{
     background-image: url('assets/img/cloud2.jpg');
 }
 
-.dark header .toggle-container label{
+.dark .toggle-container label{
     background-color: #162f7d;
 }

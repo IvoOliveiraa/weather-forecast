@@ -11,17 +11,16 @@
 </head>
 <body>
 
-    <header>
-        <div class="toggle-container">
-            <input type="checkbox" name="toggle" id="toggle">
-            <label for="toggle">
-                <div class="circle"></div>
-            </label>
-        </div>
-    </header>
-
     <main>
         <div class="container">
+            
+            <div class="toggle-container">
+                <input type="checkbox" name="toggle" id="toggle">
+                <label for="toggle">
+                    <div class="circle"></div>
+                </label>
+            </div>
+
             <h1>Confira o clima de uma cidade:</h1>
 
             <div class="form-container width">
@@ -29,30 +28,30 @@
                 <button id="search"><i class="bi bi-search"></i></button>
             </div>
 
-            <div class="weather-data">
+            <div class="weather-data hide">
                 <div class="city width">
                     <i class="bi bi-geo-alt-fill"></i>
-                    <p>Nova iguaçu</p>
+                    <p id="cityEl"></p>
                 </div>
 
                 <div class="temperature width">
-                    <p><span>38</span>&deg;C</p>
+                    <p><span id="temperatureEl"></span></p>
                 </div>
 
                 <div class="weather width">
-                    <p>Nublado</p>
-                    <img src="http://openweathermap.org/img/wn/01d.png" alt="">
+                    <p id="weatherEl"></p>
+                    <img id="weatherSrc" src="" alt="">
                 </div>
 
                 <div class="container-wind">
                     <div class="humidity width">
                         <i class="bi bi-droplet-fill"></i>
-                        <p><span>48</span>%</p>
+                        <p><span id="humidityEl"></span></p>
                     </div>
 
                     <div class="wind width">
                         <i class="bi bi-wind"></i>
-                        <p><span>3km/h</span></p>
+                        <p><span id="windEl"></span></p>
                     </div>
                 </div>
 
