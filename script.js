@@ -15,7 +15,7 @@ const wind = document.querySelector("#windEl");
 
 const weatherData = document.querySelector(".hide");
 
-
+//Function
 const getWeatherData = async(cityValue) =>{
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityValue}&units=metric&appid=${apiKey}&lang=pt_br`;
 
@@ -26,13 +26,11 @@ const getWeatherData = async(cityValue) =>{
 };
 
 
-
-//Function
 const showData = async(cityValue) =>{
     const data = await getWeatherData(cityValue);
 
     city.textContent = data.name;
-    temperature.textContent = parseInt(data.main.temp);
+    temperature.textContent = `${parseInt(data.main.temp)}°C`;
     weather.textContent = data.weather[0].description;
     weatherSrc.setAttribute('src', `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`)
     humidity.textContent = `${data.main.humidity}%`;
@@ -60,8 +58,30 @@ cityInput.addEventListener('keyup', (e) =>{
 });
 
 
+//Dark mode
 const toggleBtn = document.querySelector("#toggle");
 
+const toggleTheme = () =>{
+    document.body.classList.toggle('dark');
+};
+
+const loadingTheme = () =>{
+    const darkMode = localStorage.getItem('dark');
+
+    if(darkMode){
+        toggleTheme();
+        toggleBtn.checked = !toggleBtn.checked;
+    }
+};
+
+loadingTheme();
+
 toggleBtn.addEventListener('click', () =>{
-    document.body.classList.toggle('dark')
+   toggleTheme();
+
+   localStorage.removeItem('dark');
+
+   if(document.body.classList.contains('dark')){
+    localStorage.setItem('dark', true)
+   }
 });
